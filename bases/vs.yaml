@@ -8,7 +8,7 @@
       namespace: \${TARGET_NAMESPACE}
     spec:
       hosts:
-        - \${HOST}.istio-ingressgateway-istio-system.
+        - \${HOST}.istio-ingressgateway-istio-system
       gateways:
         - \${TARGET_NAMESPACE}/\${HOST}-gw
       http:
