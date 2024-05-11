@@ -26,17 +26,22 @@ La estructura del repositorio se organiza de la siguiente manera:
 - Kubernetes v1.19+
 - Kustomize v4.0.5+
 - Istio instalado en el cluster de Kubernetes
+- Pipeline de Jenkins parametrizado
+
+## Advertencia
+
+Este repositorio se realiza con fines didácticos. En el entorno real de itzuli, existen una serie de herramientas donde se parametrizan los modelos de traducción, por lo que si quieres utilizar este código, deberás adaptarlo a tus necesidades.
 
 ## Ejecución
 Para generar una plantilla en tu entorno de Kubernetes en el modo Stable, sigue los pasos siguientes asumiendo que tienes el binario 'kustomize' accesible desde el mismo directorio:
 ```bash
 kustomize build stable
 ```
-Puedes consultar el resultado de la plantilla generada en el fichero `examples/template_stable_example.yaml`
+Puedes consultar el resultado de la plantilla generada en el fichero `examples/template_stable_example.yaml` , asumiendo una parametrización correcta del modelo adm-eu-es
 
 Para generar una plantilla en tu entorno de Kubernetes en el modo Mirror, sigue los pasos siguientes asumiendo que tienes el binario 'kustomize' accesible desde el mismo directorio:
 ```bash
 kustomize build mirror
 ```
-Puedes consultar el resultado de la plantilla generada en el fichero `examples/template_mirror_example.yaml`
+Puedes consultar el resultado de la plantilla generada en el fichero `examples/template_mirror_example.yaml` , asumiendo que se ha generado para la el modelo adm-eu-es de Itzuli.
 
