@@ -8,7 +8,7 @@
       namespace: \${TARGET_NAMESPACE}
     spec:
       selector:
-          istio: ingressgateway # use istio default controller
+          istio: ingressgateway
       servers:
       - hosts:
         - \${HOST}.istio-ingressgateway-istio-system     
