@@ -30,20 +30,20 @@ La estructura del repositorio se organiza de la siguiente manera:
 
 ## Advertencia
 
-Este repositorio se realiza con fines didácticos. En el entorno real de itzuli, existen una serie de herramientas donde se parametrizan los modelos de traducción, por lo que si quieres utilizar este código, deberás adaptarlo a tus necesidades.
+Este repositorio se ha realizado con fines didácticos para un Trabajo de Fin de Grado. En un entorno real como el de de itzuli, existen una serie de herramientas donde se parametrizan los modelos de traducción, por lo que si quieres utilizar este código, deberás adaptarlo a tus necesidades.
 
 ## Ejecución
 Para generar una plantilla en tu entorno de Kubernetes en el modo Stable, sigue los pasos siguientes asumiendo que tienes el binario 'kustomize' accesible desde el mismo directorio:
 ```bash
 kustomize build stable
 ```
-Puedes consultar el resultado de la plantilla generada en el fichero `examples/template_stable_example.yaml` , asumiendo una parametrización correcta del modelo adm-eu-es
+Puedes consultar el resultado de la plantilla generada en el fichero `examples/kustomize-examples/template_stable_example.yaml` , asumiendo una parametrización correcta del modelo adm-eu-es de Itzuli.
 
 Para generar una plantilla en tu entorno de Kubernetes en el modo Mirror, sigue los pasos siguientes asumiendo que tienes el binario 'kustomize' accesible desde el mismo directorio:
 ```bash
 kustomize build mirror
 ```
-Puedes consultar el resultado de la plantilla generada en el fichero `examples/template_mirror_example.yaml` , asumiendo que se ha generado para la el modelo adm-eu-es de Itzuli.
+Puedes consultar el resultado de la plantilla generada en el fichero `examples/kustomize-examples/template_mirror_example.yaml` , asumiendo una parametrización correcta del modelo adm-eu-es de Itzuli.
 
 ## Objetos de Istio generados
 Si quieres ver un ejemplo de los objetos de Istio generados (Gateway, ServiceEntry, VirtualService y DestinationRule) para el modelo adm-eu-es en modo Mirror, puedes consultar el directorio `examples/istio-objects` 
