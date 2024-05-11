@@ -1,0 +1,15 @@
+- op: add
+  path: /objects/2/spec/http
+  value:
+    - match:
+      - uri:
+          prefix: \${VS_URI}
+      rewrite:
+        uri: ' '
+      route:
+      - destination:
+          host: \${HOST}
+          port:
+            number: 8080
+          subset: stable
+        weight: 100

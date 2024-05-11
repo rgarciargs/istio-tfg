@@ -1,0 +1,41 @@
+kind: Template
+apiVersion: v1
+metadata:
+  name: istio
+  annotations:
+    description: istio para dtic
+    tags: istio, dtic  
+objects:
+parameters:
+- name: TARGET_NAMESPACE
+  description: "Target namespace"
+  value: "istio-sandbox"
+  required: true
+- name: DR_NAME
+  description: "DestinationRule Name"
+  value: "itzuli-<%=MODEL%>-dr"
+  required: true
+- name: VS_NAME
+  description: "VirtualService Name"
+  value: "itzuli-<%=MODEL%>-vs"
+  required: true
+- name: VS_URI
+  description: "VirtualService URI"
+  value: "<%=VS_URI%>"
+  required: true
+- name: MIRROR_PERCENT
+  description: "mirrorPercentage"
+  value: <%="'" + MIRROR_PERCENT + "'"%>
+  required: true  
+- name: WEIGHT_CANDIDATE
+  description: "weight candidate"
+  value: <%="'" + WEIGHT_CANDIDATE + "'"%>
+  required: true 
+- name: WEIGHT_STABLE
+  description: "weight stable"
+  value: <%="'" + WEIGHT_STABLE + "'"%>
+  required: true 
+- name: HOST
+  description: "VirtualService Host"
+  value: "itzuli-<%=MODEL%>"
+  required: true

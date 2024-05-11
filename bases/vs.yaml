@@ -1,0 +1,14 @@
+- op: add
+  path: /objects/-
+  value:
+    kind: VirtualService
+    apiVersion: networking.istio.io/v1alpha3
+    metadata:
+      name: \${HOST}-vs
+      namespace: \${TARGET_NAMESPACE}
+    spec:
+      hosts:
+        - \${HOST}.istio-ingressgateway-istio-system.
+      gateways:
+        - \${TARGET_NAMESPACE}/\${HOST}-gw
+      http:

@@ -1,0 +1,11 @@
+- op: add
+  path: /objects/2/spec/http/0/mirror
+  value:
+    host: \${HOST}
+    port:
+      number: 8080
+    subset: rc
+- op: add
+  path: /objects/2/spec/http/0/mirrorPercentage
+  value:
+    value: "\\${{MIRROR_PERCENT}}"

@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- t.yaml
+patches:
+- target:
+    kind: Template
+  path: gw.yaml
+- target:
+    kind: Template
+  path: vs.yaml
+- target:
+    kind: Template
+  path: se.yaml

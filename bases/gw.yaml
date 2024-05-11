@@ -1,0 +1,18 @@
+- op: add
+  path: /objects/-
+  value:
+    kind: Gateway
+    apiVersion: networking.istio.io/v1alpha3
+    metadata:
+      name: \${HOST}-gw
+      namespace: \${TARGET_NAMESPACE}
+    spec:
+      selector:
+          istio: ingressgateway # use istio default controller
+      servers:
+      - hosts:
+        - \${HOST}.istio-ingressgateway-istio-system     
+        port:
+          name: http-\${HOST}
+          number: 80
+          protocol: HTTP

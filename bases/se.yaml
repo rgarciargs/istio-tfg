@@ -1,0 +1,18 @@
+- op: add
+  path: /objects/-
+  value:
+    apiVersion: networking.istio.io/v1alpha3
+    kind: ServiceEntry
+    metadata:
+      name: \${HOST}-se
+      namespace: \${TARGET_NAMESPACE}
+    spec:
+      hosts:
+      - "\\${HOST}.istio-ingressgateway-istio-system"      
+      location: MESH_INTERNAL
+      ports:
+      - name: http-\${HOST}
+        number: 80
+        protocol: http
+      resolution: DNS
+

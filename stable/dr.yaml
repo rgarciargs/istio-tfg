@@ -1,0 +1,14 @@
+- op: add
+  path: /objects/-
+  value:
+    apiVersion: networking.istio.io/v1alpha3
+    kind: DestinationRule
+    metadata:
+      name: \${DR_NAME}
+      namespace: \${TARGET_NAMESPACE}
+    spec:
+      host: \${HOST}
+      subsets:
+      - name: stable
+        labels:
+          version: stable

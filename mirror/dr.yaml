@@ -1,0 +1,6 @@
+- op: add
+  path: /objects/5/spec/subsets/-
+  value: 
+    name: rc
+    labels:
+      version: rc
