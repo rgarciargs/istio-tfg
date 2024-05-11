@@ -1,0 +1,15 @@
+kind: ServiceEntry
+apiVersion: networking.istio.io/v1beta1
+metadata:
+  name: itzuli-adm-eu-es-se
+  namespace: istio-sandbox
+spec:
+  hosts:
+    - itzuli-adm-eu-es.istio-ingressgateway-istio-system
+  ports:
+    - number: 80
+      protocol: http
+      name: http-itzuli-adm-eu-es-se
+  location: MESH_INTERNAL
+  resolution: DNS
+status: {}
