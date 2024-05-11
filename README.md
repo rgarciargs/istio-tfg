@@ -45,3 +45,6 @@ kustomize build mirror
 ```
 Puedes consultar el resultado de la plantilla generada en el fichero `examples/template_mirror_example.yaml` , asumiendo que se ha generado para la el modelo adm-eu-es de Itzuli.
 
+## Objetos de Istio generados
+Si quieres ver un ejemplo de los objetos de Istio generados (Gateway, ServiceEntry, VirtualService y DestinationRule) para el modelo adm-eu-es, puedes consultar el directorio `examples/istio-objects` 
+
