@@ -3,7 +3,7 @@ kind: Template
 metadata:
   annotations:
     description: istio para itzuli
-    tags: istio, it<uli
+    tags: istio, itzuli
   name: istio
 objects:
 - apiVersion: networking.istio.io/v1alpha3
