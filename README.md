@@ -3,7 +3,7 @@
 # Plantillas de Kustomize para Itzuli con Istio
 
 ## Descripción
-Este repositorio contiene las plantillas de Kustomize para la configuración y el despliegue del traductor neuronal de euskera, Itzuli, optimizado con Istio en un entorno Kubernetes. Estas configuraciones están diseñadas para facilitar la gestión y el despliegue de los servicios en diferentes ambientes, utilizando las capacidades de Istio para mejorar la observabilidad, el enrutamiento y la seguridad.
+Este repositorio contiene las plantillas de Kustomize para la configuración y el despliegue del traductor neuronal de euskera, Itzuli, optimizado con Istio en un entorno Kubernetes. Estas configuraciones están diseñadas para facilitar la gestión y el despliegue de los servicios en diferentes entornos, utilizando las capacidades de Istio para mejorar la observabilidad, el enrutamiento y la seguridad.
 
 ## Estructura del Repositorio
 La estructura del repositorio se organiza de la siguiente manera:
