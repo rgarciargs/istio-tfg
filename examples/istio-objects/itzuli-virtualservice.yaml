@@ -1,0 +1,59 @@
+kind: VirtualService
+apiVersion: networking.istio.io/v1beta1
+metadata:
+  name: itzuli-virtualservice
+  namespace: istio-system
+spec:
+  hosts:
+    - itzuli.istio-ingressgateway-istio-system
+  gateways:
+    - itzuli-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /adm/eu2es
+      route:
+        - destination:
+            host: itzuli-adm-eu-es.istio-ingressgateway-istio-system
+    - match:
+        - uri:
+            prefix: /adm/es2eu
+      route:
+        - destination:
+            host: itzuli-adm-es-eu.istio-ingressgateway-istio-system
+    - match:
+        - uri:
+            prefix: /es2eu
+      route:
+        - destination:
+            host: itzuli-es-eu.istio-ingressgateway-istio-system
+    - match:
+        - uri:
+            prefix: /eu2es
+      route:
+        - destination:
+            host: itzuli-eu-es.istio-ingressgateway-istio-system
+    - match:
+        - uri:
+            prefix: /fr2eu
+      route:
+        - destination:
+            host: itzuli-fr-eu.istio-ingressgateway-istio-system
+    - match:
+        - uri:
+            prefix: /eu2fr
+      route:
+        - destination:
+            host: itzuli-eu-fr.istio-ingressgateway-istio-system
+    - match:
+        - uri:
+            prefix: /en2eu
+      route:
+        - destination:
+            host: itzuli-en-eu.istio-ingressgateway-istio-system
+    - match:
+        - uri:
+            prefix: /eu2en
+      route:
+        - destination:
+            host: itzuli-eu-en.istio-ingressgateway-istio-system
