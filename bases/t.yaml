@@ -3,8 +3,8 @@ apiVersion: v1
 metadata:
   name: istio
   annotations:
-    description: istio para dtic
-    tags: istio, dtic  
+    description: istio para itzuli
+    tags: istio, itzuli  
 objects:
 parameters:
 - name: TARGET_NAMESPACE
